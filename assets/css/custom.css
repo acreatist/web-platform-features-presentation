@@ -1,3 +1,16 @@
+
+@font-face {
+    font-family: 'pauls_super_fontregular';
+    src: url('fonts/pauls_super_font-webfont.eot');
+    src: url('fonts/pauls_super_font-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pauls_super_font-webfont.woff') format('woff'),
+         url('fonts/pauls_super_font-webfont.ttf') format('truetype'),
+         url('fonts/pauls_super_font-webfont.svg#pauls_super_fontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .slides > section {
     background: url(../img/logo.png) no-repeat right bottom;
 }
@@ -27,4 +40,9 @@ img {
   max-height: 1.2em !important;
   margin: 0 !important;
   border: none !important;
+}
+
+.presentor .position_rank {
+  font-family: pauls_super_fontregular;
+  display: block;
 }
