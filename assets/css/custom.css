@@ -35,7 +35,7 @@
   background: rgba( 50,200,90,.4 );
 }
 
-img {
+.inline {
   max-width: 1.2em !important;
   max-height: 1.2em !important;
   margin: 0 !important;
