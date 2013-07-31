@@ -46,3 +46,11 @@
   font-family: pauls_super_fontregular;
   display: block;
 }
+
+.presentor .team_name {
+  color: transparent;
+  background: url(../img/stageit_logo.png) no-repeat;
+  background-size: 100% 0.8em;
+  background-position: center center;
+  text-shadow: none;
+}
