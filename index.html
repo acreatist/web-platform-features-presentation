@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Chrome Developer Tools - Advanced Features</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="assets/css/reveal.min.css">
+		<link rel="stylesheet" href="assets/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="assets/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="assets/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+		    <section>
+					<h2>Chrome Developer Tools</h2>
+					<h3>Advanced Features</h3>
+					<h4 id="presentation-date">December 2012</h4>
+				</section>
+				<section data-state=presentor>
+					<h2>Who am I?</h2>
+					<h3>Dimitar Bonev a.k.a Mitko - developer in Behind The Book team</h3>
+				</section>
+				<section>
+					<h2>Software Setup</h2>
+					<ul>
+						<li>
+							<a href="http://paulirish.com/2012/chrome-canary-for-developers/" target=_blank>Chrome Canary</a>
+							<img src="assets/img/chrome-canary-logo.png"/>
+							<img src="assets/img/canary-bird.jpg"/>
+							<ul>
+								<li>bleeding-edge build</li>
+								<li>runs side-by-side with your other Chrome installation <img src="assets/img/chrome-side-by-side.jpg"/></li>
+							</ul>
+						</li>
+						<li>
+							Chrome <a href="about:flags">flags</a> turned on
+							<ul>
+								<li>Developer Tools experiments</li>
+								<li>Experimental JavaScript</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Extra Tools</h2>
+					</section>
+					<section>
+						<h3><a href="http://net.tutsplus.com/tutorials/tools-and-tips/say-yo-to-yeoman/" target=_blank>Yeoman</a></h3>
+						<blockquote>Yeoman is a robust and opinionated set of tools, libraries, and a workflow that can help developers quickly build beautiful, compelling web apps</blockquote>
+					</section>
+					<section>
+						<h3><a href="http://www.nczonline.net/blog/tag/ecmascript-6/" target=_blank>EcmaScript 6</a></h3>
+						<ul>
+							<li>Set, Map, WeakMap</li>
+							<li>class, module</li>
+							<li>Generator (yield)</li>
+							<li><a href="http://kangax.github.com/es5-compat-table/es6/" target=_blank>what your browser supports?</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Usefull Links</h3>
+						<p>
+							<a href="http://developers.whatwg.org/" target=_blank>HTML_standard</a>
+							<a href="http://www.webplatform.org/" target=_blank>webplatform</a>
+							<a href="https://developer.mozilla.org/en-US/docs" target=_blank>MDN</a>
+							<a href="http://reference.sitepoint.com/html" target=_blank>SitePoint</a> |
+							<a href="http://www.webpagetest.org/" target=_blank>webpagetest</a>
+							<a href="http://jsperf.com/popular" target=_blank>jsPerf</a> |
+							<a href="http://jsfiddle.net/" target=_blank>jsFiddle</a>
+							<a href="http://jsbin.com/" target=_blank>jsbin</a> |
+							<a href="http://caniuse.com/" target=_blank>caniuse</a>
+							<a href="http://html5please.com/" target=_blank>html5please</a>
+							<a href="http://www.html5rocks.com/en/tutorials/" target=_blank>html5rocks</a>
+							<a href="http://html5test.com/" target=_blank>html5test</a> |
+							<a href="http://anti-code.com/devtools-cheatsheet/" target=_blank>Cheatsheet</a> |
+							<a href="http://w3fools.com/" target=_blank>w3fools</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>Thank You!</h2>
+					<p>slides: <a href="https://github.com/dsbonev/dev-tools-presentation" target=_blank>github.com/dsbonev/dev-tools-presentation</a></p>
+				</section>
+			</div>
+
+
+		</div>
+
+		<script src="assets/lib/js/head.min.js"></script>
+		<script src="assets/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: true,
+				rollingLinks: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'assets/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'assets/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+					//{ src: 'assets/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'assets/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+		<script src="assets/js/custom.js"></script>
+
+	</body>
+</html>

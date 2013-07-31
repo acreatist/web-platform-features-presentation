@@ -1,0 +1,30 @@
+.slides > section {
+    background: url(../img/logo.png) no-repeat right bottom;
+}
+
+.slides section:first-of-type h2 {
+    color: orange !important;
+}
+
+.default .reveal .state-background {
+  background: rgba( 0,0,0,0 );
+}
+
+.alert .reveal .state-background {
+  background: rgba( 200,50,30,.6 );
+}
+
+.blackout .reveal .state-background {
+  background: rgba( 0,0,0,.6 );
+}
+
+.soothe .reveal .state-background {
+  background: rgba( 50,200,90,.4 );
+}
+
+img {
+  max-width: 1.2em !important;
+  max-height: 1.2em !important;
+  margin: 0 !important;
+  border: none !important;
+}
