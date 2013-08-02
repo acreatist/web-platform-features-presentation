@@ -1,0 +1,25 @@
+dialog {
+  width: 50%;
+  border-radius: 1em;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 255, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+dialog header,
+dialog footer {
+  background: black;
+  color: white;
+  border-radius: 0.25em;
+}
+
+footer button {
+  background: white;
+  border-radius: 0.5em;
+}
