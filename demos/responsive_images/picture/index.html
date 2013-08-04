@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Responsive image - picture element</title>
+<!-- <link rel="stylesheet" href="css/main.css" /> -->
+<body>
+  <picture>
+    <source media="(max-width: 30em)" src="img/yacht_race@mobile.jpg">
+    <source media="(min-width: 30em) and (max-width: 48em)" src="img/yacht_race@wide-mobile.jpg">
+    <source media="(min-width: 48em) and (max-width: 60em)" src="img/yacht_race@tablet.jpg">
+    <source media="(min-width: 60em) and (max-width: 80em)" src="img/yacht_race@desktop.jpg">
+    <source media="(min-width: 80em)" src="img/yacht_race@hires.jpg">
+    <!-- fallback image
+      <img src="./Grid system demo_files/yacht_race@hires.jpg" alt="A very exciting yacht race.">
+    -->
+  </picture>
+  <script src="js/main.js"></script>
+</body>
