@@ -1,0 +1,46 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Custom element</title>
+<element name=text-box>
+  <section>I am a text-box.</section>
+  <script>
+    // When <element> is in document, might run in wrong context.
+    // Only do work when this == <element>.
+    if (this !== window) {
+      var section = this.querySelector('section');
+
+      this.register({
+        prototype: {
+          readyCallback: function() {
+            this.innerHTML = section.innerHTML;
+          }
+        }
+     });
+    }
+  </script>
+</element>
+<element name=custom-button extends=button>
+  <section>Custom Button.</section>
+  <script>
+    // When <element> is in document, might run in wrong context.
+    // Only do work when this == <element>.
+    if (this !== window) {
+      var section = this.querySelector('section');
+
+      this.register({
+        prototype: {
+          readyCallback: function() {
+            this.innerHTML = section.innerHTML;
+          }
+        }
+     });
+    }
+  </script>
+</element>
+<body>
+  <text-box></text-box>
+  <text-box></text-box>
+  <button is=custom-button></button>
+  <script src="js/platform.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
