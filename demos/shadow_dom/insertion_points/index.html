@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Insertion Points</title>
+<template id=shadow_lists_template>
+  <section>
+    <h1>Superadmins</h1>
+    <ul>
+      <content select=.superadmin>
+        <li>no records found
+      </content>
+    </ul>
+  </section>
+  <section>
+    <h1>Admins</h1>
+    <ul>
+      <content select=.admin>
+        <li>no records found
+      </content>
+    </ul>
+  </section>
+  <section>
+    <h1>Users</h1>
+    <ul>
+      <content select=li>
+        <li>no records found
+      </content>
+    </ul>
+  </section>
+</template>
+<body>
+  <ul id=user_list>
+    <li>user_1
+    <li class=admin>admin_1
+    <li>user_2
+    <li class=admin>admin_2
+  </ul>
+  <button id=add_shadow>Add shadow</button>
+  <div>
+    <img src=img/insertion-points.svg>
+  </div>
+  <script src=js/jquery.min.js></script>
+  <script src=js/main.js></script>
+</body>
