@@ -1,0 +1,76 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Styling</title>
+<template id=profile_badge_template>
+  <div class="user-info">
+    <div class="user-gravatar48">
+      <a href="/users/22656/jon-skeet">
+        <content select=.avatar></content>
+      </a>
+    </div>
+    <div class="user-details">
+      <a href="/users/22656/jon-skeet">
+        <content select=.name></content>
+      </a>
+      <br>
+      <span class="user-location">
+        <content select=.location></content>
+      </span>
+      <br>
+      <content select=.reputation></content>
+      <span title="gold badges">
+        <span class="badge1"></span>
+        <content select=.badgecount></content>
+        <span>gold badges</span>
+      </span>
+    </div>
+  </div>
+  <style>
+    @host {
+      * { /* any type of hosting element */
+        display: inline-block;
+        border: 1px solid orange;
+        border-radius: 0.5em;
+      }
+    }
+    .user-details {
+      font-weight: bold;
+      font-style: italic;
+    }
+    .location { /* NOOP - it is part of the Document DOM */
+      font-size: 300%;
+    }
+    content::-webkit-distributed(.location) {
+      text-transform: uppercase;
+    }
+  </style>
+</template>
+<body>
+  <style>
+    .user_profile_data {
+      color: grey; /* color is inherited by the Shadow DOM */
+    }
+    .user-details { /* NOOP - it is part of the Shadow DOM */
+      border: 1px solid blue;
+    }
+  </style>
+  <div class=user_profile_data>
+    <div class=name>Jon Skeet</div>
+    <img class=avatar src=img/avatar.jpg />
+    <div class=location>Reading, United Kingdom</div>
+    <span class=badgecount>206</span>
+  </div>
+  <button id=add_shadow>Add shadow</button>
+  <script src=js/jquery.min.js></script>
+  <script src=js/main.js></script>
+  <table>
+  <tbody><tr><th>Scenario</th><th>applyAuthorStyles</th><th>resetStyleInheritance</th></tr>
+    <tr><td>"I have my own appearance, but want to match basic properties like text color."<br>
+      <em>basically, you're creating a widget</em></td><td>false</td><td>false</td></tr>
+    <tr><td>"Forget the page! I have my own theme"<br>
+      <em>you'll still need a "component reset stylesheet" because distributed content gets the styles it had in the page.</em></td><td>false</td><td>true</td></tr>
+    <tr><td>"I'm a component designed to get my theme from styles in the page"</td><td>true</td><td>true</td></tr>
+    <tr><td>"I want to blend in with the page as much as possible."<br>
+      <em>remember selectors don't cross the shadow boundary</em>.</td><td>true</td><td>false</td></tr>
+  </tbody></table>
+</body>
