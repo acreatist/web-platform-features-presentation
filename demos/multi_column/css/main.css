@@ -1,0 +1,15 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+#multicol {
+  border: 0.5em solid orange;
+}
+
+p {
+  border: 0.25em solid green;
+}
+
+label {
+  padding-right: 1em;
+}

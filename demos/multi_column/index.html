@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Multi-column layout</title>
+<link rel="stylesheet" href="css/main.css" />
+<template id=options_template>
+  <label>
+    <select>
+    </select>
+  </label>
+</template>
+<body>
+  <form id=container_form>
+    <h2>Container</h2>
+  </form>
+  <form id=element_span_form>
+    <h2>Child element to span (e.g. the heading element)</h2>
+  </form>
+  <form id=element_break_form>
+    <h2>Child element to break before|inside|after (e.g. all the paragraphs)</h2>
+  </form>
+  <div id=multicol>
+    <p>
+      A multi-column element (or multicol element for short) is an element whose ‘column-width’ or ‘column-count’ property is not ‘auto’ and therefore acts as a container for multi-column layout.
+    </p>
+    <p>
+      In the traditional CSS box model, the content of an element is flowed into the content box of the corresponding element. Multi-column layout introduces a new type of container between the content box and the content, namely the column box (or column for short). The content of a multicol element is flowed into its column boxes.
+    </p>
+    <h3 id=child_to_span>
+      CSS Multi-column Layout Module W3C Candidate Recommendation
+    </h3>
+    <p>
+      Column boxes in a multi-column element are arranged into rows. Like table cells, the column boxes in a row are ordered in the inline direction of the multicol element. The column width is the length of the column box in the inline direction. The column height is the length of the column box in the block direction. All column boxes in a row have the same column width, and all column boxes in a row have the same column height. Within each row in the multi-column element, adjacent column boxes are separated by a column gap, which may contain a column rule. All column gaps in the same row are equal. All column rules in the same row are also equal, if they appear; column rules only appear between columns that both have content.
+    </p>
+    <p>
+      In the simplest case a multicol element will contain only one row of columns, and the height of each column will be equivalent to the used height of the multi-column element's content box. If the multi-column element is paginated, the height of each row is constrained by the page and the content continues in a new row of column boxes on the next page; a column box never splits across pages. The same effect occurs when a spanning element divides the multi-column element: the columns before the spanning element are balanced and shortened to fit their content. Content after the spanning element then flows into a new row of column boxes.
+    </p>
+    <p>
+      It is not possible to set properties/values on column boxes. For example, the background of a certain column box cannot be set and a column box has no concept of padding, margin or borders.
+    </p>
+  </div>
+  <script src=js/jquery.min.js></script>
+  <script src=js/main.js></script>
+</body>
