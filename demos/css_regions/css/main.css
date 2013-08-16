@@ -1,0 +1,18 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+article {
+  -webkit-flow-into: article-flow;
+}
+
+.region {
+  -webkit-flow-from: article-flow;
+  border: 0.25em solid orange;
+  height: 20vh;
+}
+
+img {
+  width: 90vw;
+  height: 35vh;
+}
