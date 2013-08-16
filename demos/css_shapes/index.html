@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>CSS Shapes</title>
+<link rel="stylesheet" href="css/main.css" />
+<body>
+  <article>
+    <p id=shape class=shape>
+      CSS Shapes control the geometric shapes used for wrapping inline flow content outside an element. For Level 1, CSS Shapes can be applied to floats. A circle shape on a float will cause inline content to wrap around the circle shape instead of the float's bounding box.
+      Exclusion elements define exclusion areas that contribute to their containing block's wrapping context. As a consequence, exclusions impact the layout of their containing block's descendants.
+      Float area
+      The area used for wrapping content around a float element. By default, the float area is the float element's margin box. This specification's ‘shape-outside’ property can be used to define arbitrary, non-rectangular float areas.
+      Shapes define arbitrary geometric contours around which inline content flows. The shape-outside property defines the float area for a float.
+      While the boundaries used for wrapping inline flow content outside an float can be defined using shapes, the actual box model does not change. If the element has specified margins, borders or paddings they will be computed and rendered according to the [CSS3BOX] module.
+      Float positioning is an exception. If a float has an outside shape, its positioning is resolved as defined in [CSS21] but the outside shape's bounding box is used in lieu of the float's margin box.
+      Shapes can be specified using syntax similar to SVG's basic shapes. The definitions use <length> type and the <percentage> types (see [CSS3VAL]). Percentages are resolved from the computed value of the ‘box-sizing’ property [CSS3UI] on the element to which the property applies. For the radius r of the circle shape, a percentage value is resolved as specified in the SVG recommendation (see [SVG11]). Path styling like stroking is not considered part of the specified shape.
+    </p>
+    <p id=shape_circle class=shape>
+      CSS Shapes control the geometric shapes used for wrapping inline flow content outside an element. For Level 1, CSS Shapes can be applied to floats. A circle shape on a float will cause inline content to wrap around the circle shape instead of the float's bounding box.
+      Exclusion elements define exclusion areas that contribute to their containing block's wrapping context. As a consequence, exclusions impact the layout of their containing block's descendants.
+      Float area
+      The area used for wrapping content around a float element. By default, the float area is the float element's margin box. This specification's ‘shape-outside’ property can be used to define arbitrary, non-rectangular float areas.
+      Shapes define arbitrary geometric contours around which inline content flows. The shape-outside property defines the float area for a float.
+      While the boundaries used for wrapping inline flow content outside an float can be defined using shapes, the actual box model does not change. If the element has specified margins, borders or paddings they will be computed and rendered according to the [CSS3BOX] module.
+      Float positioning is an exception. If a float has an outside shape, its positioning is resolved as defined in [CSS21] but the outside shape's bounding box is used in lieu of the float's margin box.
+      Shapes can be specified using syntax similar to SVG's basic shapes. The definitions use <length> type and the <percentage> types (see [CSS3VAL]). Percentages are resolved from the computed value of the ‘box-sizing’ property [CSS3UI] on the element to which the property applies. For the radius r of the circle shape, a percentage value is resolved as specified in the SVG recommendation (see [SVG11]). Path styling like stroking is not considered part of the specified shape.
+    </p>
+  </article>
+</body>
